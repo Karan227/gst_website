@@ -35,14 +35,16 @@
         .navbar-style{
             margin: 0;
             /* padding: 0; */
-            /* background-color:#143d59; */
+            background-color:#143d59;
             /* background-color: #343a40; */
         }
 
 
         .navbar-call{
             border-radius: 10px;
-            background-color: #ffc439;
+            /* background-color: #ffc439; */
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,51,89,1) 0%, rgba(255,255,255,1) 0%, rgba(149,255,76,1) 0%, rgba(255,255,255,1) 41%, rgba(255,255,255,1) 52%, rgba(255,132,0,1) 100%, rgba(0,212,255,1) 100%);
             /* margin-bottom: 0; */
             z-index: 10;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -54,9 +56,10 @@
         }
 
         .navbar-number{
-            color: #3ea92d !important;
+            color: rgb(36, 36, 167) !important;
             font:large;
-            font-weight: 700; 
+            font-weight: 700;
+            
         }
 
         .nav-search{
@@ -69,12 +72,13 @@
         }
 
 
-        .active{
+        .nav-active{
           border-bottom: 2px solid purple;
         }
 
         .nav-second{
-          margin:-10px auto auto;
+          margin:-23px auto auto;
+          height: 80px;
         }
         
         .flip-card {
@@ -187,7 +191,7 @@
         <div class="container navbar-call">
             <img class="brand-icon" src="./img/brand-icon.png">
         
-        <a class="navbar-brand navbar-number"><i class="fa fa-phone" aria-hidden="true"></i> Call Us:1800 8888 888</a>
+        <a class="navbar-brand navbar-number"><i class="fa fa-phone" aria-hidden="true"></i> Call Us:1800 888 8888</a>
         <form class="form-inline">
           <input class="form-control mr-sm-2 nav-search" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -199,9 +203,9 @@
           <span class="navbar-toggler-icon"></span>
         </button>
       
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="z-index: 9; background:inherit;padding: 10px; border-radius: 5px;">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active"">
+            <li class="nav-item nav-active"">
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
@@ -242,9 +246,9 @@
 
       <div data-aos="zoom-in" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" style="z-index: 5;"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1" style="z-index: 5;"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2" style="z-index: 5;"></li>
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -269,13 +273,24 @@
 
     <div class="container" style="background-color: #f3f5fa; margin:50px auto; padding: 15px;">
         <div style="width: 100%; text-align: center; "><h2 style="font-family: 'Montserrat', sans-serif; font-weight: 400; margin:10px auto;">What we do?</h2></div>
-        <p>We are #1 GST Franchises Center Provider in India, approved from Government of India’s GSTN Organisation in Tax and Accounting under the legal contract. Our Aim is to Contribute in Employment in India and Empower small businesses to prosper PAN-India. We work hard to provide all the available services such as GST Services, Banking, Loans, Insurance, Healthcare Services, Micro ATM Service, Ticket Booking, Hotel Booking, Flight Tickets Booking, Various types of Loans and Incorporation Services like Company Registration, Society Registration, Proprietorship, LLP and many more. We Provide 300+ Services at this time but working on to add Somewhere about 100+ more services to make sure all our GST Franchises Center, GST Suvidha Kendra and GST Suvidha Centers make more profit every Day.
-        </p>
+        <div class="row">
+          <div class="col-12 col-md-8">
+          <p>We are #1 GST Franchises Center Provider in India, approved from Government of India’s GSTN Organisation in Tax and Accounting under the legal contract.
+           Our Aim is to Contribute in Employment in India and Empower small businesses to prosper PAN-India.
+            We work hard to provide all the available services such as GST Services, Banking, Loans, Insurance, Healthcare Services, Micro ATM Service, Ticket Booking, Hotel Booking, Flight Tickets Booking, Various types of Loans and Incorporation Services like Company Registration,
+             Society Registration, Proprietorship, LLP and many more. We Provide 300+ Services at this time but working on to add Somewhere about 100+ more services to make sure all our GST Franchises Center, GST Suvidha Kendra and 
+             GST Suvidha Centers make more profit every Day.
+          </p>
+        </div>
+        <div class="col">
+          <img src="./img/wwd.jfif"> 
+        </div>
+        </div>
     </div>
 
-
+    <div class="container-fluid" style="background: url(./img/awards-bg.jpg); background-attachment: fixed; padding: 15px 0;">
     <div class="container">
-      <div style="width: 100%; text-align: center; "><h2 style="font-family: 'Montserrat', sans-serif; font-weight: 400; margin:10px auto;">Awards</h2></div>
+      <div style="width: 100%; text-align: center; "><h2 style="font-family: 'Montserrat', sans-serif; font-weight: 400; margin:30px auto; color: White; border-bottom: 2px solid white;">Awards</h2></div>
     </div>
 
     <div class="container">
@@ -284,10 +299,10 @@
               <div class="flip-card" style="margin: 20px auto;">
                   <div class="flip-card-inner">
                       <div class="flip-card-front">
-                          <img src="./img/award-1.jpeg" alt="Avatar" style="width:18rem; height:13rem;">
+                          <img src="./img/award-1.jpeg" alt="Avatar" style="width:18rem; height:13rem; border-radius: 5px;">
                       </div>
                       <div class="flip-card-back">
-                          <img src="./img/award-1.jpeg" alt="Avatar" style="width:18rem; height:13rem;">
+                          <img src="./img/award-1.jpeg" alt="Avatar" style="width:18rem; height:13rem; border-radius: 5px;">
                       </div>
                   </div>
               </div>
@@ -296,10 +311,10 @@
               <div class="flip-card" style="margin: 20px auto;">
                   <div class="flip-card-inner">
                       <div class="flip-card-front">
-                          <img src="./img/award-2.jpeg" alt="Avatar" style="width:18rem; height:13rem;">
+                          <img src="./img/award-2.jpeg" alt="Avatar" style="width:18rem; height:13rem;border-radius: 5px;">
                       </div>
                       <div class="flip-card-back">
-                          <img src="./img/award-2.jpeg" alt="Avatar" style="width:18rem; height:13rem;">
+                          <img src="./img/award-2.jpeg" alt="Avatar" style="width:18rem; height:13rem;border-radius: 5px;">
                       </div>
                   </div>
               </div>
@@ -308,15 +323,16 @@
               <div class="flip-card" style="margin: 20px auto;">
                   <div class="flip-card-inner">
                       <div class="flip-card-front">
-                          <img src="./img/award-3.jpeg" alt="Avatar" style="width:18rem; height:13rem;">
+                          <img src="./img/award-3.jpeg" alt="Avatar" style="width:18rem; height:13rem;border-radius: 5px;">
                       </div>
                       <div class="flip-card-back">
-                          <img src="./img/award-3.jpeg" alt="Avatar" style="width:18rem; height:13rem;">
+                          <img src="./img/award-3.jpeg" alt="Avatar" style="width:18rem; height:13rem;border-radius: 5px;">
                       </div>
                   </div>
               </div>
           </div>
       </div>
+  </div>
   </div>
 
 
