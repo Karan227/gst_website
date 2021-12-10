@@ -167,7 +167,7 @@
       font-family: 'Roboto Slab', serif;
     }
 
-    .services-col{
+    .services-col {
       margin: 2px auto;
       padding: 0px 0 !important;
     }
@@ -225,38 +225,168 @@
 
 
     .container .services-card {
+      position: relative;
+      max-width: 290px;
+      height: 150px;
+      background-color: #fff;
+      margin: 0px auto;
+      /* padding : 0px 5px !important;  */
+
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+      /* transition : 0.3s ease-in-out; */
+      border-radius: 15px;
+      align-content: center;
+    }
+
+
+
+    .container .services-card .image {
+      position: relative;
+      width: 260px;
+      height: 230px;
+      top: -40%;
+      left: 8px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .container .services-card .image img {
+      max-width: 100%;
+      border-radius: 15px;
+    }
+    
+
+
+
+    /* Our services  */
+
+    :root {
+  --col-primary: #296eb3;
+  --col-secondary: #003b81;
+  --col-background: #e8e8e8;
+  --col-light: #e8e8e8;
+  --col-dark: #022f64;
+  --col-free: #7dbaff;
+  --col-bronze: #b85a24;
+  --col-silver: #8a8a8a;
+  --col-gold: #e2a922;
+}
+
+.price_table {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  align-items: start;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  max-width: 80em;
+}
+
+.package {
+  border-radius: 4px;
+  background: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
   position: relative;
-  max-width : 290px;
-  height : 150px;  
-  background-color : #fff;
-   margin : 0px auto; 
-  /* padding : 0px 5px !important;  */
-  
-  display : flex;
-  flex-direction : column;
-  box-shadow : 0 5px 20px rgba(0,0,0,0.5);
-  /* transition : 0.3s ease-in-out; */
-  border-radius : 15px;
-  align-content: center;
+}
+.package h2 {
+  margin: 0;
+  padding: 1rem;
+  background: var(--col-primary);
+  font-size: 1.2em;
+  text-align: center;
+  font-weight: normal;
+  color: white;
+  position: relative;
+}
+.package h2::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.4rem;
+  left: 0;
+  bottom: 0;
+}
+.package .price {
+  padding: 0.2rem 1rem;
+  background: linear-gradient(45deg, var(--col-secondary) 0%, var(--col-dark) 100%);
+  color: white;
+  text-shadow: 0 4px 0 var(--col-dark);
+}
+.package p {
+  padding: 1rem;
+}
+.package .price {
+  font-size: 1.2em;
+  font-weight: normal;
+  text-align: center;
+  box-shadow: inset 0 10px 4px -6px rgba(0, 0, 0, 0.1);
+}
+.package .big {
+  display: inline;
+  font-size: 4em;
+  font-weight: 700;
+}
+.package ul {
+  list-style: none;
+  padding: 0 0 1rem 0;
+  margin: 0;
+  border-bottom: 1px solid var(--col-primary);
+}
+.package li {
+  padding: 0.8em 1em;
+  font-size: 0.9em;
+}
+.package li:nth-child(odd) {
+  background: var(--col-light);
+}
+.package button {
+  cursor: pointer;
+  padding: 1em 2em;
+  font-size: 1rem;
+  display: block;
+  color: white;
+  margin: 1rem auto;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(0deg, var(--col-secondary) 0%, var(--col-primary) 100%);
+  transition: all 0.2s;
+}
+.package button:hover, .package button:focus {
+  background: linear-gradient(0deg, var(--col-secondary) 0%, var(--col-dark) 100%);
+  box-shadow: 0 0 0 4px white, 0 0 0 8px var(--col-primary);
+  outline: 0;
+}
+.package .banner {
+  background: linear-gradient(90deg, #33a530 0%, #4eee49 50%, #33a530 100%);
+  transform: rotate(-45deg);
+  position: absolute;
+  z-index: 1;
+  padding: 0.5rem 4rem;
+  top: 2rem;
+  left: -4rem;
+  border: 2px solid #91ff69;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
-
-
-.container .services-card .image {
-  position : relative;
-  width : 260px;
-  height : 230px;
-  top : -40%;
-  left: 8px;
-  box-shadow : 0 5px 20px rgba(0,0,0,0.2);
-  z-index : 1;
+.package_free h2::after {
+  background: var(--col-free);
+  background: linear-gradient(90deg, var(--col-free) 0%, white 50%, var(--col-free) 100%);
 }
 
-.container .services-card .image img {
-  max-width : 100%;
-  border-radius : 15px;
+.package_bronze h2::after {
+  background: linear-gradient(90deg, var(--col-bronze) 0%, white 50%, var(--col-bronze) 100%);
 }
 
+.package_silver h2::after {
+  background: linear-gradient(90deg, var(--col-silver) 0%, white 50%, var(--col-silver) 100%);
+}
+
+.package_gold h2::after {
+  background: linear-gradient(90deg, var(--col-gold) 0%, white 50%, var(--col-gold) 100%);
+}
 
     /* Footer */
     ul {
@@ -369,6 +499,46 @@
       font-weight: 600;
       margin-bottom: 40px;
       position: relative;
+    }
+    
+    .word-first{
+      animation: fadeOut  15s;
+    }
+
+    .word-second{
+      animation: fadeIn  15s;
+    }
+    .first {
+      animation: fadeOut  3s;
+      display: none;
+    }
+    .second{
+      animation: fadeIn 3s;
+      display: block;
+    }
+
+    @keyframes fadeOut {
+      0% {
+        opacity:1;
+        /* background-color: #bbb; */
+      }
+      100% {
+        opacity:0;
+        /* transition: opacity 2s linear; */
+        /* background-color: #ffffff; */
+      }
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity:0;
+        /* transition: opacity 2s linear; */
+        /* background-color:white; */
+      }
+      100% {
+        opacity:1;
+        /* transition: opacity 2s linear; */
+        /* background-color: #bbb; */
+      }
     }
 
     .footer-widget-heading h3::before {
@@ -961,119 +1131,209 @@
       </div>
     </div>
   </div>
+  
+
+
+
+
+
+<!-- Modal -->
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content" style="background:
+    linear-gradient(
+    rgba(15, 19, 41, 0.85),
+    rgba(24, 32, 71, 0.95)),
+    url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/clouds-cloudy-forest-mountain.jpg) no-repeat center center;
+  background-size: cover; color: #ffffff;">
+
+      <div class="modal-header" style="text-align: center;">
+        <h5 class="modal-title col-10" style="margin: auto;" id="exampleModalLongTitle">Digital Marketing Services</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col" style="padding: 10px;">
+              <ul>
+                <li>Search Engine Optimization</li>
+                <li>Online Reputation Management</li>
+                <li>Logo Designing</li>
+                <li>Pamphlet Designing</li>
+                <li>Banner and Poster Designing</li>
+                <li>Website Designing</li>
+                <li>Website Development</li>
+                <li>Google Advertisement</li>
+                <li>Copywriting and Content Marketing</li>
+                <li>Video Marketing Services</li>
+                <li>Mobile App Marketing</li>
+                <li>Social Media Marketing</li>
+              </ul>
+            </div>
+            <div class="col" style="min-width:250px;">
+              <div style="padding:10px; margin-right:  20px;">
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Name</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Mobile No.</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Mobile No.">
+                </div>
+                <div class="row">
+                  <div class="col"><div class="form-group">
+                    <label for="exampleInputPassword1">State</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="State">
+                  </div></div>
+                  <div class="col"><div class="form-group">
+                    <label for="exampleInputPassword1">Zip</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Zip">
+                  </div></div>
+                </div>
+                
+                
+                <div class="container" style="text-align: center;"><button type="submit" class="btn btn-outline-info btn-center">Submit</button></div>
+                
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <!-- Primary Services Heading -->
   <div>
-  <div class="container about-container">
-    <div>
-      <p class="heading-para">Our Primary Services</p>
+    <div class="container about-container">
+      <div>
+        <p class="heading-para">Our Primary Services</p>
+      </div>
     </div>
+
+
+  <section>
+      <div class="container-fluid" style="background-color: #143d59;">
+        <div class="container" style="padding:5px;">
+          <div class="row" style="margin:8px 17px">
+            <div class="col services-col">
+              <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><div class="card services-card"
+                style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
+                <img style="max-width: 100%; width: 90%;" src="./img/digital marketing jpg.jpg" class="card-img"
+                  alt="...">
+              </div>
+              </a>
+            </div>
+            <div class="col services-col">
+              <div class="card services-card"
+                style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
+                <img style="max-width: 100%; width: 90%;" src="./img/service1.png" class="card-img" alt="...">
+              </div>
+            </div>
+            <div class="col services-col">
+              <div class="card services-card"
+                style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
+                <img style="max-width: 100%; width: 90%;" src="./img/service2.png" class="card-img" alt="...">
+              </div>
+            </div>
+            <div class="col services-col">
+              <div class="card services-card"
+                style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
+                <img style="max-width: 100%; width: 90%;" src="./img/service3.png" class="card-img" alt="...">
+              </div>
+            </div>
+            <div class="col services-col">
+              <div class="card services-card"
+                style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
+                <img style="max-width: 100%; width: 90%;" src="./img/service12.png" class="card-img" alt="...">
+              </div>
+            </div>
+          </div>
+          <div class="row" style="margin:-7px 15px">
+            <div class="col services-col">
+              <div class="card services-card"
+                style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
+                <img style="max-width: 100%; width: 90%;" src="./img/service4.png" class="card-img" alt="...">
+              </div>
+            </div>
+            <div class="col services-col">
+              <div class="card services-card"
+                style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
+                <img style="max-width: 100%; width: 90%;" src="./img/service5.png" class="card-img" alt="...">
+              </div>
+            </div>
+            <div class="col services-col">
+              <div class="card services-card"
+                style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
+                <img style="max-width: 100%; width: 90%;" src="./img/service6.png" class="card-img" alt="...">
+              </div>
+            </div>
+            <div class="col services-col">
+              <div class="card services-card"
+                style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
+                <img style="max-width: 100%; width: 90%;" src="./img/service7.png" class="card-img" alt="...">
+              </div>
+            </div>
+            <div class="col services-col">
+              <div class="card services-card"
+                style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
+                <img style="max-width: 100%; width: 90%;" src="./img/service8.png" class="card-img" alt="...">
+              </div>
+            </div>
+          </div>
+          <div class="row" style="margin:8px 17px">
+            <div class="col services-col">
+              <div class="card services-card"
+                style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
+                <img style="max-width: 100%; width: 90%;" src="./img/service13.png" class="card-img" alt="...">
+              </div>
+            </div>
+            <div class="col services-col">
+              <div class="card services-card"
+                style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
+                <img style="max-width: 100%; width: 90%;" src="./img/service9.png" class="card-img" alt="...">
+              </div>
+            </div>
+            <div class="col services-col">
+              <div class="card services-card"
+                style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
+                <img style="max-width: 100%; width: 90%;" src="./img/service10.png" class="card-img" alt="...">
+              </div>
+            </div>
+            <div class="col services-col">
+              <div class="card services-card"
+                style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
+                <img style="max-width: 100%; width: 90%;" src="./img/service11.png" class="card-img" alt="...">
+              </div>
+            </div>
+            <div class="col services-col">
+              <div class="card services-card"
+                style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
+                <img style="max-width: 100%; width: 90%;" src="./img/service14.png" class="card-img"
+                  alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
 
 
 
- 
 
 
-  
-  <section>
-    <div class="container-fluid" style="background-color: #143d59;">
-    <div class="container" style="padding:5px;">
-        <div class="row" style="margin:8px 17px">
-          <div class="col services-col"> 
-            <div class="card services-card" style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
-              <img style="max-width: 100%; width: 90%;" src="./img/digital marketing jpg.jpg" class="card-img" alt="...">
-            </div>
-          </div>
-          <div class="col services-col"> 
-            <div class="card services-card" style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
-              <img style="max-width: 100%; width: 90%;" src="./img/service1.png" class="card-img" alt="...">
-            </div>
-          </div>
-          <div class="col services-col">
-            <div class="card services-card" style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
-              <img style="max-width: 100%; width: 90%;" src="./img/service2.png" class="card-img" alt="...">
-            </div>
-          </div>
-          <div class="col services-col">
-            <div class="card services-card" style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
-              <img style="max-width: 100%; width: 90%;" src="./img/service3.png" class="card-img" alt="...">
-            </div>
-          </div>
-          <div class="col services-col"> 
-            <div class="card services-card" style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
-              <img style="max-width: 100%; width: 90%;" src="./img/lic icon.jpg" class="card-img" alt="...">
-            </div>
-          </div>
-        </div>
-        <div class="row" style="margin:-7px 15px">
-          <div class="col services-col">
-            <div class="card services-card" style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
-              <img style="max-width: 100%; width: 90%;" src="./img/service4.png" class="card-img" alt="...">
-            </div>
-          </div>
-          <div class="col services-col">
-            <div class="card services-card" style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
-              <img style="max-width: 100%; width: 90%;" src="./img/service5.png" class="card-img" alt="...">
-            </div>
-          </div>
-          <div class="col services-col"> 
-            <div class="card services-card" style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
-              <img style="max-width: 100%; width: 90%;" src="./img/service6.png" class="card-img" alt="...">
-            </div>
-          </div>
-          <div class="col services-col">
-            <div class="card services-card" style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
-              <img style="max-width: 100%; width: 90%;" src="./img/service7.png" class="card-img" alt="...">
-            </div>
-          </div>
-          <div class="col services-col">
-            <div class="card services-card" style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
-              <img style="max-width: 100%; width: 90%;" src="./img/service8.png" class="card-img" alt="...">
-            </div>
-          </div>
-        </div>
-        <div class="row" style="margin:8px 17px">
-          <div class="col services-col"> 
-            <div class="card services-card" style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
-              <img style="max-width: 100%; width: 90%;" src="./img/micro atm png.jpg" class="card-img" alt="...">
-            </div>
-          </div>
-          <div class="col services-col"> 
-            <div class="card services-card" style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
-              <img style="max-width: 100%; width: 90%;" src="./img/service9.png" class="card-img" alt="...">
-            </div>
-          </div>
-          <div class="col services-col">
-            <div class="card services-card" style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
-              <img style="max-width: 100%; width: 90%;" src="./img/service10.png" class="card-img" alt="...">
-            </div>
-          </div>
-          <div class="col services-col">
-            <div class="card services-card" style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
-              <img style="max-width: 100%; width: 90%;" src="./img/service11.png" class="card-img" alt="...">
-            </div>
-          </div>
-          <div class="col services-col"> 
-            <div class="card services-card" style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
-              <img style="max-width: 100%; width: 90%;" src="./img/on road assistance icon.jpg" class="card-img" alt="...">
-            </div>
-          </div>
-        </div>
-    </div>
-    </div>
-  </section>
-
-</div>
+  <!-- services counter -->
 
 
-
-
-
-   <!-- services counter -->
-
-
-   <section class="services-counter">
+  <section class="services-counter">
     <div class="container"
       style="background-color:rgb(6, 6, 119); border-radius: 10px;padding: 5px; margin: 20px auto; color:aliceblue;text-align: center;">
       <div class="heading-para" style="text-align: center; margin:30px auto ;color: aliceblue;">Services Offered</div>
@@ -1091,7 +1351,7 @@
 
 
 
-    <!-- testimonial -->
+  <!-- testimonial -->
   <div class="container about-container">
     <div>
       <p class="heading-para">Testimonials</p>
@@ -1181,31 +1441,190 @@
 
   <!-- G2C -->
 
-  <div class="container about-container">
-    <div>
-      <p class="heading-para">Government To Customer</p>
+  
+  <div class="container-fluid" style="position: relative; margin: 0; padding:0px 0px;">
+    <div class="container about-container" style="text-align: center; margin-bottom: 15px;">
+        <p class="heading-para">Government To Customer</p>
     </div>
-  </div>
-
-  <div class="container-fluid" style="margin:5px 0px;">
-    <div style="margin: auto; width: fit-content;"><h4> National Level Services</h4></div>
+  <div class="container-fluid" id="fade_div1" style="padding:0px 10px !important;">
+    <div style="margin: 0 auto; width: fit-content;">
+      <h4 id="fade_head1"> National Level Services</h4>
+    </div>
     <br>
     <div class="container-fluid">
       <div class="row">
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c1.jpg" alt="" style="width: 120px; margin-top: 15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c2.jpg" alt="" style="width: 120px; margin-top: 15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c3.jpg" alt="" style="width: 120px; margin-top: 15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c4.jpg" alt="" style="width: 120px; margin-top: 15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c5.jpg" alt="" style="width: 120px; margin-top: 15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c6.jpg" alt="" style="width: 120px; margin-top: 15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c7.jpg" alt="" style="width: 120px; margin-top: 15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c8.jpg" alt="" style="width: 120px; margin-top: 15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c9.jpg" alt="" style="width: 120px; margin-top: 15px;"></div>
+        <div class="col" style="margin:3px 0px; padding: 0;"><img src="./img/g2c1.jpg" alt=""
+            style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
+        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c2.jpg" alt=""
+            style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
+        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c3.jpg" alt=""
+            style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
+        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c4.jpg" alt=""
+            style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
+        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c5.jpg" alt=""
+            style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
+        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c6.jpg" alt=""
+            style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
+        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c7.jpg" alt=""
+            style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
+        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c8.jpg" alt=""
+            style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
+        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c9.jpg" alt=""
+            style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
       </div>
     </div>
   </div>
+
+  <div class="container-fluid" id="fade_div2" style="padding:5px 10px !important;">
+    <div style="margin: auto; width: fit-content;">
+      <h4 id="fade_head2"> State Level Services</h4>
+    </div>
+    <br>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-1.png" alt=""
+            style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
+        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-2.png" alt=""
+            style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
+        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-3.png" alt=""
+            style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
+        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-4.png" alt=""
+            style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
+        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-5.png" alt=""
+            style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
+        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-1.png" alt=""
+            style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
+        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-6.png" alt=""
+            style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
+        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-7.png" alt=""
+            style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
+        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-8.png" alt=""
+            style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
+      </div>
+    </div>
+  </div>
+  </div>
   <br>
   <br>
+
+  <!-- Services-tables  -->
+  <div class="container about-container" style="margin-top:0;">
+    <div>
+      <p class="heading-para">Our Services</p>
+    </div>
+  </div>
+
+
+  <div class="price_table" style="padding:0 30px;">
+    <div class="package package_free">
+      <h2>GST Services</h2>
+      <!-- <div class="price">£<div class="big">0</div>/mo</div> -->
+      <!-- <p>Sign up today for a free account and receive: </p> -->
+      <ul>
+        <li>GST Registration</li>
+        <li>GST Filing Regular Scheme</li>
+        <li>GST Return Filing Composition Scheme</li>
+        <li>GST Annual Return</li>
+        <li>GST Audit</li>
+        <li>GST ITC Refund</li>
+        <li>GST Composition to Regular Scheme</li>
+        <li>GST E-Commerce Return</li>
+        <li>GST Final Return</li>
+        <li>GST Reconciliation</li>
+        <li>GST Surrender</li>
+        <li>GSTR 7 Return</li>
+        <li>Revocation of GST</li>
+        <li>GST PMT 09 Form Submission</li>
+        <li>GST Regular Return Annual Charges</li>
+        <li>GST Response of Notice</li>
+        <li>GST Return Filing in Composition Scheme ( CMP-8)</li>
+        <li>GST Amendment</li>
+        <li>TCS & TDS GST Return Filing</li>
+        <li>E-Way Bill +100 More</li>
+      </ul>
+      <!-- <button>Learn more</button> -->
+    </div>
+    <div class="package package_bronze">
+      <!-- <div class="banner">Most Popular</div> -->
+      <h2>Digital Marketing Services</h2>
+      <!-- <div class="price">£<div class="big">5</div>/mo</div> -->
+      <!-- <p>Includes everything in our Free package plus:</p> -->
+      <ul>
+        <li>Search Engine Optimization</li>
+        <li>Online Reputation Management</li>
+        <li>Logo Designing</li>
+        <li>Pamphlet Designing</li>
+        <li>Banner and Poster Designing</li>
+        <li>Website Designing</li>
+        <li>Website Development</li>
+        <li>Google Advertisement</li>
+        <li>Copywriting and Content Marketing</li>
+        <li>Video Marketing Services</li>
+        <li>Mobile App Marketing</li>
+        <li>Social Media Marketing</li>
+        <!-- <li>Premium Support</li> -->
+      </ul>
+      <!-- <button>Learn more</button> -->
+    </div>
+    <div class="package package_silver">
+      <h2>CA & Accounting Services</h2>
+      <!-- <div class="price">£<div class="big">10</div>/mo</div> -->
+      <!-- <p>Includes everything in our Bronze package plus:</p> -->
+      <ul>
+        <li>Balance Sheet & Profit Loss Account</li>
+        <li>CA Certification of Balance Sheet</li> 
+        <li>Monthly - Accounting Package</li> 
+        <li>Yearly - Accounting Package</li> 
+        <li>Income Tax Return</li>
+        <li>Appoinment of an Auditor </li>
+        <li>TAX Audit</li>
+        <li>Trademark Registration </li>
+        <li>Import Export Code (IEC)</li>
+        <li>Food License & Registration (FSSAI)</li>
+        <li>TDS Return</li>
+        <li>TDS Challan Submission </li>
+        <li>Advance TAX</li>
+        <li>Letter of Undertaking (LUT)</li>
+        <li>PF & ESI Registration</li>
+        <li>PF KYC, Widhdrawal & Return</li>
+        <li>CMA & Project Report</li>
+        <li>Statutory Audit</li>
+        <li>Digital Signature Certificate (DSC)</li>
+        <li>Trade Licence</li>
+      </ul>
+      <!-- <button>Learn more</button> -->
+    </div>
+    <div class="package package_gold">
+      <h2>Company Registration Services</h2>
+      <!-- <div class="price">£<div class="big">19</div>/mo</div> -->
+      <!-- <p>Includes everything in our Silver package plus:</p> -->
+      <ul>
+        <li>Company Formation</li>
+        <li>ROC Filling</li>
+        <li>MGT-7A</li>
+        <li>AOC-4</li>
+        <li>RUN Firm</li>
+        <li>Directors Identification Number (DIN)</li>
+        <li>PAN & TAN</li>
+        <li>Registration Under Shop Establishment </li>
+        <li>Trust & Society Registration </li>
+        <li>One Person Company Registration (OPC)</li>
+        <li>NIDHI Company Registration</li>
+        <li>Sec 8 Company Registration</li>
+        <li>LLP Formation</li>
+        <li>Partnership Firm</li>
+        <li>Gem Registration</li>
+        <li>Udyam Registration</li>
+        <li>Company KYC</li>
+        <li>Director's KYC</li>
+        <li>Alteration and Edition in Company </li>
+        <li>Closing of Company</li>
+      </ul>
+      <!-- <button>Learn more</button> -->
+    </div>
+  </div>
+
+
   <!-- Footer -->
   <footer class="footer-section">
     <div class="container">
@@ -1327,7 +1746,6 @@
   <script>
 
 
-
     $(window).on('scroll', function () {
       if ($(window).scrollTop() >= $(
         '.services-counter').offset().top + $('.services-counter').
@@ -1364,6 +1782,30 @@
     });
 
 
+
+    var fade_div1 = document.querySelector("#fade_div1");
+    var fade_div2 = document.querySelector("#fade_div2");
+    var heading1 = document.querySelector("#fade_head1");
+    var heading2 = document.querySelector("#fade_head2");
+
+    fade_div1.classList.add("first");
+    
+    fade_div2.classList.add("second");
+    // heading1.classList.add("word-first");
+    // heading2.classList.add("word-second");
+    setInterval(()=>{
+      fade_div1.classList.toggle("first");
+      fade_div2.classList.toggle("first");
+      fade_div1.classList.toggle("second");
+      fade_div2.classList.toggle("second");
+    },10000)
+    
+    // setInterval(()=>{
+    //   heading1.classList.toggle("word-first");
+    //   heading2.classList.toggle("word-second");
+    //   heading1.classList.toggle("word-second");
+    //   heading2.classList.toggle("word-first");
+    // },20000)
   </script>
 
 
