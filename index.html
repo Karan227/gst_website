@@ -10,8 +10,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://use.fontawesome.com/f995fe03b5.js"></script>
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">/ -->
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;600;700&display=swap" rel="stylesheet"> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -19,949 +17,8 @@
     rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <title>Hello, world!</title>
-
-  <style>
-    body {
-      /* padding: 0; */
-      font-family: sans-serif;
-    }
-
-    .nav-marquee {
-      padding: 3px;
-      height: 35px;
-      margin: 0;
-      /* color:blue; */
-      font-size: large;
-      font-weight: 600;
-      color: #f4b41a;
-      background-color: #143d59;
-      /* background-color: #343a40; */
-    }
-
-
-    .navbar-style {
-      margin: 0;
-      /* padding: 0; */
-      background-color: #143d59;
-      /* background-color: #343a40; */
-    }
-
-
-    .navbar-call {
-      border-radius: 10px;
-      /* background-color: #ffc439; */
-      /* background: rgb(2,0,36);
-            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,51,89,1) 0%, rgba(255,255,255,1) 0%, rgba(149,255,76,1) 0%, rgba(255,255,255,1) 41%, rgba(255,255,255,1) 52%, rgba(255,132,0,1) 100%, rgba(0,212,255,1) 100%);
-            margin-bottom: 0; */
-
-      /* background: rgb(2,0,36); */
-      /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,51,89,1) 0%, rgba(255,255,255,1) 0%, rgba(255,132,0,1) 0%, rgba(255,205,148,1) 30%, rgba(255,255,255,1) 44%, rgba(255,255,255,1) 53%, rgba(255,255,255,1) 59%, rgba(149,255,76,1) 100%, rgba(0,212,255,1) 100%); */
-      background: rgb(2, 0, 36);
-      background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(2, 51, 89, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(255, 132, 0, 1) 0%, rgba(255, 205, 148, 1) 16%, rgba(255, 255, 255, 1) 44%, rgba(255, 255, 255, 1) 48%, rgba(255, 255, 255, 1) 51%, rgba(149, 255, 76, 1) 100%, rgba(0, 212, 255, 1) 100%);
-      z-index: 10;
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    }
-
-    .brand-icon {
-      width: 10vw;
-      margin: 10px;
-    }
-
-    .navbar-number {
-      color: rgb(36, 36, 167) !important;
-      font: large;
-      font-weight: 700;
-
-    }
-
-    .nav-search {
-      width: 60vw;
-      margin: 5px;
-    }
-
-    .nav-btn {
-      margin: 10px;
-    }
-
-
-    .nav-active {
-      border-bottom: 2px solid purple;
-    }
-
-    .nav-second {
-      margin: -23px auto auto;
-      height: 80px;
-    }
-
-    .services-card:hover {
-      /* background: rgba(0,0,0,0.8) !important; */
-      backdrop-filter: saturate(180%) blur(10px) !important;
-      /* backdrop-filter: blur(10px) !important; */
-      box-shadow: rgba(255, 255, 255, 0.411) 0px 54px 55px, rgba(255, 255, 255, 0.534) 0px -12px 30px, rgba(221, 221, 221, 0.562) 0px 4px 6px, rgba(218, 217, 217, 0.5) 0px 12px 13px, rgba(197, 197, 197, 0.527) 0px -3px 5px !important;
-    }
-
-    .flip-card {
-      background-color: transparent;
-      width: 18rem;
-      height: 13rem;
-      border-radius: 2px;
-      /* border: 1px solid #f1f1f1; */
-      perspective: 1000px;
-      /* Remove this if you don't want the 3D effect */
-    }
-
-    .partner-img {
-      /* border-radius:50; */
-      max-width: 100%;
-      width: 90%;
-    }
-
-    .flip-card-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      transition: transform 0.8s;
-      transform-style: preserve-3d;
-    }
-
-
-    .flip-card:hover .flip-card-inner {
-      transform: rotateY(180deg);
-    }
-
-    /* Position the front and back side */
-    .flip-card-front,
-    .flip-card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      -webkit-backface-visibility: hidden;
-      /* Safari */
-      backface-visibility: hidden;
-    }
-
-    .flip-card-front {
-      background-color: #bbb;
-      color: black;
-    }
-
-
-    .flip-card-back {
-      background-color: dodgerblue;
-      color: white;
-      transform: rotateY(180deg);
-    }
-
-
-    .about-container div {
-      margin: 50px auto;
-      text-align: center;
-    }
-
-    .heading-para {
-      font-size: 30px;
-      font-weight: 400;
-      margin: auto;
-      font-family: 'Roboto Slab', serif;
-    }
-
-    .services-col {
-      margin: 2px auto;
-      padding: 0px 0 !important;
-    }
-
-    .card img {
-      width: 12rem;
-      height: 8.5rem;
-      border-radius: 5%;
-      margin: 0 auto;
-      box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    }
-
-    .card {
-      padding: 5px 0 !important;
-      border-radius: 1px white;
-      text-align: center;
-      margin: 0 auto;
-      /* box-shadow: 0 5px 10px rgba(0,0,0,.2); */
-      /* background-color: rgb(177, 171, 155); */
-    }
-
-    .card-title {
-      font-weight: 500;
-      font-size: 18px !important;
-      font-family: 'Roboto Slab', serif;
-
-    }
-
-
-
-
-    /* Testimonials */
-    .testimonial-writer-details {
-      /* height: 2em; */
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-    }
-
-    .testimonial-writer-avatar>img {
-      width: 40px;
-      height: 40px !important;
-    }
-
-    .testimonial-writer-name {
-      margin-left: 12px;
-    }
-
-    .testimonial-body {
-      margin-top: 25px;
-
-    }
-
-
-
-    .container .services-card {
-      position: relative;
-      max-width: 290px;
-      height: 150px;
-      background-color: #fff;
-      margin: 0px auto;
-      /* padding : 0px 5px !important;  */
-
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-      /* transition : 0.3s ease-in-out; */
-      border-radius: 15px;
-      align-content: center;
-    }
-
-
-
-    .container .services-card .image {
-      position: relative;
-      width: 260px;
-      height: 230px;
-      top: -40%;
-      left: 8px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-    }
-
-    .container .services-card .image img {
-      max-width: 100%;
-      border-radius: 15px;
-    }
-    
-
-
-
-    /* Our services  */
-
-    :root {
-  --col-primary: #296eb3;
-  --col-secondary: #003b81;
-  --col-background: #e8e8e8;
-  --col-light: #e8e8e8;
-  --col-dark: #022f64;
-  --col-free: #7dbaff;
-  --col-bronze: #b85a24;
-  --col-silver: #8a8a8a;
-  --col-gold: #e2a922;
-}
-
-.price_table {
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-  align-items: start;
-  column-gap: 2rem;
-  row-gap: 2rem;
-  max-width: 80em;
-}
-
-.package {
-  border-radius: 4px;
-  background: white;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
-  overflow: hidden;
-  position: relative;
-}
-.package h2 {
-  margin: 0;
-  padding: 1rem;
-  background: var(--col-primary);
-  font-size: 1.2em;
-  text-align: center;
-  font-weight: normal;
-  color: white;
-  position: relative;
-}
-.package h2::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 0.4rem;
-  left: 0;
-  bottom: 0;
-}
-.package .price {
-  padding: 0.2rem 1rem;
-  background: linear-gradient(45deg, var(--col-secondary) 0%, var(--col-dark) 100%);
-  color: white;
-  text-shadow: 0 4px 0 var(--col-dark);
-}
-.package p {
-  padding: 1rem;
-}
-.package .price {
-  font-size: 1.2em;
-  font-weight: normal;
-  text-align: center;
-  box-shadow: inset 0 10px 4px -6px rgba(0, 0, 0, 0.1);
-}
-.package .big {
-  display: inline;
-  font-size: 4em;
-  font-weight: 700;
-}
-.package ul {
-  list-style: none;
-  padding: 0 0 1rem 0;
-  margin: 0;
-  border-bottom: 1px solid var(--col-primary);
-}
-.package li {
-  padding: 0.8em 1em;
-  font-size: 0.9em;
-}
-.package li:nth-child(odd) {
-  background: var(--col-light);
-}
-.package button {
-  cursor: pointer;
-  padding: 1em 2em;
-  font-size: 1rem;
-  display: block;
-  color: white;
-  margin: 1rem auto;
-  border: none;
-  border-radius: 5px;
-  background: linear-gradient(0deg, var(--col-secondary) 0%, var(--col-primary) 100%);
-  transition: all 0.2s;
-}
-.package button:hover, .package button:focus {
-  background: linear-gradient(0deg, var(--col-secondary) 0%, var(--col-dark) 100%);
-  box-shadow: 0 0 0 4px white, 0 0 0 8px var(--col-primary);
-  outline: 0;
-}
-.package .banner {
-  background: linear-gradient(90deg, #33a530 0%, #4eee49 50%, #33a530 100%);
-  transform: rotate(-45deg);
-  position: absolute;
-  z-index: 1;
-  padding: 0.5rem 4rem;
-  top: 2rem;
-  left: -4rem;
-  border: 2px solid #91ff69;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
-}
-
-.package_free h2::after {
-  background: var(--col-free);
-  background: linear-gradient(90deg, var(--col-free) 0%, white 50%, var(--col-free) 100%);
-}
-
-.package_bronze h2::after {
-  background: linear-gradient(90deg, var(--col-bronze) 0%, white 50%, var(--col-bronze) 100%);
-}
-
-.package_silver h2::after {
-  background: linear-gradient(90deg, var(--col-silver) 0%, white 50%, var(--col-silver) 100%);
-}
-
-.package_gold h2::after {
-  background: linear-gradient(90deg, var(--col-gold) 0%, white 50%, var(--col-gold) 100%);
-}
-
-    /* Footer */
-    ul {
-      margin: 0px;
-      padding: 0px;
-    }
-
-    .footer-section {
-      background: #143d59;
-      position: relative;
-    }
-
-    .footer-cta {
-      border-bottom: 1px solid #143d59;
-    }
-
-    .single-cta i {
-      color: #ff5e14;
-      font-size: 30px;
-      float: left;
-      margin-top: 8px;
-    }
-
-    .cta-text {
-      padding-left: 15px;
-      display: inline-block;
-    }
-
-    .cta-text h4 {
-      color: #fff;
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 2px;
-    }
-
-    .cta-text span {
-      color: #757575;
-      font-size: 15px;
-    }
-
-    .footer-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .footer-pattern img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 330px;
-      background-size: cover;
-      background-position: 100% 100%;
-    }
-
-    .footer-logo {
-      margin-bottom: 30px;
-    }
-
-    .footer-logo img {
-      max-width: 200px;
-    }
-
-    .footer-text p {
-      margin-bottom: 14px;
-      font-size: 14px;
-      color: #7e7e7e;
-      line-height: 28px;
-    }
-
-    .footer-social-icon span {
-      color: #fff;
-      display: block;
-      font-size: 20px;
-      font-weight: 700;
-      font-family: 'Poppins', sans-serif;
-      margin-bottom: 20px;
-    }
-
-    .footer-social-icon a {
-      color: #fff;
-      font-size: 16px;
-      margin-right: 15px;
-    }
-
-    .footer-social-icon i {
-      height: 40px;
-      width: 40px;
-      text-align: center;
-      line-height: 38px;
-      border-radius: 50%;
-    }
-
-    .facebook-bg {
-      background: #3B5998;
-    }
-
-
-
-    .twitter-bg {
-      background: #55ACEE;
-    }
-
-    .google-bg {
-      background: #DD4B39;
-    }
-
-    .footer-widget-heading h3 {
-      color: #fff;
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 40px;
-      position: relative;
-    }
-    
-    .word-first{
-      animation: fadeOut  15s;
-    }
-
-    .word-second{
-      animation: fadeIn  15s;
-    }
-    .first {
-      animation: fadeOut  3s;
-      display: none;
-    }
-    .second{
-      animation: fadeIn 3s;
-      display: block;
-    }
-
-    @keyframes fadeOut {
-      0% {
-        opacity:1;
-        /* background-color: #bbb; */
-      }
-      100% {
-        opacity:0;
-        /* transition: opacity 2s linear; */
-        /* background-color: #ffffff; */
-      }
-    }
-    @keyframes fadeIn {
-      0% {
-        opacity:0;
-        /* transition: opacity 2s linear; */
-        /* background-color:white; */
-      }
-      100% {
-        opacity:1;
-        /* transition: opacity 2s linear; */
-        /* background-color: #bbb; */
-      }
-    }
-
-    .footer-widget-heading h3::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -15px;
-      height: 2px;
-      width: 50px;
-      background: #ff5e14;
-    }
-
-    .footer-widget ul li {
-      display: inline-block;
-      float: left;
-      width: 50%;
-      margin-bottom: 12px;
-    }
-
-    .footer-widget ul li a:hover {
-      color: #ff5e14;
-    }
-
-    .footer-widget ul li a {
-      color: #878787;
-      text-transform: capitalize;
-    }
-
-    .subscribe-form {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .subscribe-form input {
-      width: 100%;
-      padding: 14px 28px;
-      background: #2E2E2E;
-      border: 1px solid #2E2E2E;
-      color: #fff;
-    }
-
-    .subscribe-form button {
-      position: absolute;
-      right: 0;
-      background: #ff5e14;
-      padding: 13px 20px;
-      border: 1px solid #ff5e14;
-      top: 0;
-    }
-
-    .subscribe-form button i {
-      color: #fff;
-      font-size: 22px;
-      transform: rotate(-6deg);
-    }
-
-    .copyright-area {
-      background: #143d59;
-      padding: 25px 0;
-    }
-
-    .copyright-text p {
-      margin: 0;
-      font-size: 14px;
-      color: #878787;
-    }
-
-    .copyright-text p a {
-      color: #ff5e14;
-    }
-
-    .footer-menu li {
-      display: inline-block;
-      margin-left: 20px;
-    }
-
-    .footer-menu li:hover a {
-      color: #ff5e14;
-    }
-
-    .footer-menu li a {
-      font-size: 14px;
-      color: #878787;
-    }
-
-
-    .div-counter {
-      border-right: 2px solid aliceblue;
-    }
-
-
-    #categories {
-      overflow: hidden;
-      width: 90%;
-      margin: 0 auto;
-    }
-
-    .clr:after {
-      content: "";
-      display: block;
-      clear: both;
-    }
-
-    #categories li {
-      position: relative;
-      list-style-type: none;
-      float: left;
-      overflow: hidden;
-      visibility: hidden;
-      transform: rotate(-60deg) skewY(30deg);
-    }
-
-    #categories li * {
-      position: absolute;
-      visibility: visible;
-    }
-
-    #categories li>div {
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      color: #fff;
-      overflow: hidden;
-      transform: skewY(-30deg) rotate(60deg);
-      backface-visibility: hidden;
-
-    }
-
-    /* HEX CONTENT */
-    #categories li img {
-      left: -100%;
-      right: -100%;
-      width: auto;
-      height: 100%;
-      margin: 0 auto;
-    }
-
-    #categories div h1,
-    #categories div p {
-      width: 90%;
-      padding: 0 5%;
-      background-color: #008080;
-      background-color: rgba(0, 128, 128, 0.8);
-      font-family: 'Raleway', sans-serif;
-      transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
-    }
-
-    #categories li h1 {
-      bottom: 110%;
-      font-style: italic;
-      font-weight: normal;
-      font-size: 1.5em;
-      padding-top: 100%;
-      padding-bottom: 100%;
-    }
-
-    #categories li h1:after {
-      content: '';
-      display: block;
-      position: absolute;
-      bottom: -1px;
-      left: 45%;
-      width: 10%;
-      text-align: center;
-      z-index: 1;
-      border-bottom: 2px solid #fff;
-    }
-
-    #categories li p {
-      padding-top: 50%;
-      top: 110%;
-      padding-bottom: 50%;
-    }
-
-
-    /* HOVER EFFECT  */
-
-    #categories li div:hover h1 {
-      bottom: 50%;
-      padding-bottom: 0%;
-    }
-
-    #categories li div:hover p {
-      top: 50%;
-      padding-top: 0%;
-    }
-
-
-    .hex-img {
-      width: 192px !important;
-      position: absolute;
-    }
-
-    /* @media (min-width:1500px) {
-  #categories li{
-    width:17.364%; 
-    padding-bottom: 20.05%; 
-  }
-  #categories li:nth-child(10n+6), #categories li:nth-child(10n+7), #categories li:nth-child(10n+8), #categories li:nth-child(10n+9), #categories li:nth-child(10n+10) {
-    margin-top: -4.2%;
-    margin-bottom: -4.2%;
-    transform: translateX(50%) rotate(-60deg) skewY(30deg);
-  }
-  #categories li:nth-child(10n+6):last-child, #categories li:nth-child(10n+7):last-child, #categories li:nth-child(10n+8):last-child, #categories li:nth-child(10n+9):last-child, #categories li:nth-child(10n+10):last-child{
-    margin-bottom:0;
-  }
-  #categories li:nth-child(10n+6){
-    margin-left:0.5%;
-  }
-  #categories li:nth-child(5n+2) {
-    margin-left:1%;
-    margin-right:1%;
-  }
-  #categories li:nth-child(5n+3),#categories li:nth-child(5n+4){
-    margin-right:1%;
-  }
-} */
-
-
-    @media (min-width:901px) {
-      #categories li {
-        width: 21.444%;
-        /* = (100-3.5) / 4.5 */
-        padding-bottom: 24.763%;
-        /* =  width /0.866 */
-      }
-
-      #categories li:nth-child(8n+5),
-      #categories li:nth-child(8n+6),
-      #categories li:nth-child(8n+7),
-      #categories li:nth-child(8n+8) {
-        margin-top: -5.298%;
-        margin-bottom: -5.298%;
-        transform: translateX(50%) rotate(-60deg) skewY(30deg);
-      }
-
-      #categories li:nth-child(8n+5):last-child,
-      #categories li:nth-child(8n+6):last-child,
-      #categories li:nth-child(8n+7):last-child,
-      #categories li:nth-child(8n+8):last-child {
-        margin-bottom: 0;
-      }
-
-      #categories li:nth-child(8n+5) {
-        margin-left: 0.5%;
-      }
-
-      #categories li:nth-child(4n+2) {
-        margin-left: 1%;
-        margin-right: 1%;
-      }
-
-      #categories li:nth-child(4n+3) {
-        margin-right: 1%;
-      }
-    }
-
-    @media (max-width: 900px) and (min-width:601px) {
-      #categories li {
-        width: 27.857%;
-        /* = (100-2.5) / 3.5 */
-        padding-bottom: 32.168%;
-        /* =  width /0.866 */
-      }
-
-      #categories li:nth-child(6n+4),
-      #categories li:nth-child(6n+5),
-      #categories li:nth-child(6n+6) {
-        margin-top: -7.322%;
-        margin-bottom: -7.322%;
-        transform: translateX(50%) rotate(-60deg) skewY(30deg);
-      }
-
-      #categories li:nth-child(6n+4):last-child,
-      #categories li:nth-child(6n+5):last-child,
-      #categories li:nth-child(6n+6):last-child {
-        margin-bottom: 0;
-      }
-
-      #categories li:nth-child(6n+4) {
-        margin-left: 0.5%;
-      }
-
-      #categories li:nth-child(3n+2) {
-        margin-left: 1%;
-        margin-right: 1%;
-      }
-    }
-
-    @media (max-width: 600px) {
-      #categories li {
-        width: 39.4%;
-        /* = (100-1.5) / 2.5 */
-        padding-bottom: 45.496%;
-        /* =  width /0.866 */
-      }
-
-      #categories li:nth-child(4n+3),
-      #categories li:nth-child(4n+4) {
-        margin-top: -8.392%;
-        margin-bottom: -8.392%;
-        transform: translateX(50%) rotate(-60deg) skewY(30deg);
-      }
-
-      #categories li:nth-child(4n+3):last-child,
-      #categories li:nth-child(4n+4):last-child {
-        margin-bottom: 0;
-      }
-
-      #categories li:nth-child(4n+3) {
-        margin-left: 1.5%;
-      }
-
-      #categories li:nth-child(2n+2) {
-        margin-left: 2%;
-      }
-    }
-
-    #fork {
-      position: fixed;
-      bottom: 0;
-      right: 0;
-      color: #000;
-      text-decoration: none;
-      border: 1px solid #000;
-      padding: .5em .7em;
-      margin: 1%;
-      transition: color .5s;
-      overflow: hidden;
-    }
-
-    #fork:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 130%;
-      height: 100%;
-      background: #000;
-      z-index: -1;
-      transform-origin: 0 0;
-      transform: translateX(-100%) skewX(-45deg);
-      transition: transform .5s;
-    }
-
-    #fork:hover {
-      color: #fff;
-    }
-
-    #fork:hover:before {
-      transform: translateX(0) skewX(-45deg);
-    }
-
-    /* Smartphones (portrait and landscape) ----------- */
-    @media only screen and (min-width : 320px) and (max-width : 480px) {
-      /* Styles */
-
-      .brand-icon {
-        width: 18vw;
-        margin: 10px;
-      }
-
-      .nav-search {
-        width: 50vw;
-        margin: 5px;
-      }
-
-      .navbar-number {
-        /* color: #3ea92d !important; */
-        font-size: 13px;
-        font-weight: 600;
-      }
-
-
-
-      .div-counter {
-        border-bottom: 2px solid aliceblue;
-        border-right: 0px;
-
-      }
-
-
-
-      p {
-        font-size: small;
-      }
-
-      h2 {
-        font-size: large;
-        font-weight: 800;
-      }
-
-      .testimonial-body {
-        width: 10rem;
-      }
-    }
-
-    /* Smartphones (landscape) ----------- */
-    @media only screen and (min-width : 321px) {
-      /* Styles */
-    }
-
-    /* Smartphones (portrait) ----------- */
-    @media only screen and (max-width : 320px) {
-      /* Styles */
-    }
-
-    /* iPads (portrait and landscape) ----------- */
-    @media only screen and (min-width : 768px) and (max-width : 1024px) {
-      /* Styles */
-    }
-
-    @media (max-width: 492px) {
-      .card {
-        width: 70vw !important;
-        margin: 20px auto;
-      }
-
-      .card-img {
-        height: 140px !important;
-      }
-    }
-  </style>
+  <title>GST Franchise Center</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -1131,74 +188,82 @@
       </div>
     </div>
   </div>
-  
 
 
 
 
 
-<!-- Modal -->
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content" style="background:
+  <!-- Modal -->
+
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content" style="background:
     linear-gradient(
     rgba(15, 19, 41, 0.85),
     rgba(24, 32, 71, 0.95)),
     url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/clouds-cloudy-forest-mountain.jpg) no-repeat center center;
   background-size: cover; color: #ffffff;">
 
-      <div class="modal-header" style="text-align: center;">
-        <h5 class="modal-title col-10" style="margin: auto;" id="exampleModalLongTitle">Digital Marketing Services</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container">
-          <div class="row">
-            <div class="col" style="padding: 10px;">
-              <ul>
-                <li>Search Engine Optimization</li>
-                <li>Online Reputation Management</li>
-                <li>Logo Designing</li>
-                <li>Pamphlet Designing</li>
-                <li>Banner and Poster Designing</li>
-                <li>Website Designing</li>
-                <li>Website Development</li>
-                <li>Google Advertisement</li>
-                <li>Copywriting and Content Marketing</li>
-                <li>Video Marketing Services</li>
-                <li>Mobile App Marketing</li>
-                <li>Social Media Marketing</li>
-              </ul>
-            </div>
-            <div class="col" style="min-width:250px;">
-              <div style="padding:10px; margin-right:  20px;">
-              <form>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Name</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name">
+        <div class="modal-header" style="text-align: center;">
+          <h5 class="modal-title col-10" style="margin: auto;" id="exampleModalLongTitle">Digital Marketing Services
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col" style="padding: 10px;">
+                <ul>
+                  <li>Search Engine Optimization</li>
+                  <li>Online Reputation Management</li>
+                  <li>Logo Designing</li>
+                  <li>Pamphlet Designing</li>
+                  <li>Banner and Poster Designing</li>
+                  <li>Website Designing</li>
+                  <li>Website Development</li>
+                  <li>Google Advertisement</li>
+                  <li>Copywriting and Content Marketing</li>
+                  <li>Video Marketing Services</li>
+                  <li>Mobile App Marketing</li>
+                  <li>Social Media Marketing</li>
+                </ul>
+              </div>
+              <div class="col" style="min-width:250px;">
+                <div style="padding:10px; margin-right:  20px;">
+                  <form>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Name</label>
+                      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Mobile No.</label>
+                      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Mobile No.">
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">State</label>
+                          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="State">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Zip</label>
+                          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Zip">
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="container" style="text-align: center;"><button type="submit"
+                        class="btn btn-outline-info btn-center">Submit</button></div>
+
+                  </form>
                 </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Mobile No.</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Mobile No.">
-                </div>
-                <div class="row">
-                  <div class="col"><div class="form-group">
-                    <label for="exampleInputPassword1">State</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="State">
-                  </div></div>
-                  <div class="col"><div class="form-group">
-                    <label for="exampleInputPassword1">Zip</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Zip">
-                  </div></div>
-                </div>
-                
-                
-                <div class="container" style="text-align: center;"><button type="submit" class="btn btn-outline-info btn-center">Submit</button></div>
-                
-              </form>
               </div>
             </div>
           </div>
@@ -1206,7 +271,6 @@
       </div>
     </div>
   </div>
-</div>
 
 
   <!-- Primary Services Heading -->
@@ -1218,16 +282,17 @@
     </div>
 
 
-  <section>
+    <section>
       <div class="container-fluid" style="background-color: #143d59;">
         <div class="container" style="padding:5px;">
           <div class="row" style="margin:8px 17px">
             <div class="col services-col">
-              <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><div class="card services-card"
-                style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
-                <img style="max-width: 100%; width: 90%;" src="./img/digital marketing jpg.jpg" class="card-img"
-                  alt="...">
-              </div>
+              <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg">
+                <div class="card services-card"
+                  style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
+                  <img style="max-width: 100%; width: 90%;" src="./img/digital marketing jpg.jpg" class="card-img"
+                    alt="...">
+                </div>
               </a>
             </div>
             <div class="col services-col">
@@ -1315,8 +380,7 @@
             <div class="col services-col">
               <div class="card services-card"
                 style="width: 13rem;border-color:#f3f5fa;background-color: #f3f5fa;margin:5px auto;">
-                <img style="max-width: 100%; width: 90%;" src="./img/service14.png" class="card-img"
-                  alt="...">
+                <img style="max-width: 100%; width: 90%;" src="./img/service14.png" class="card-img" alt="...">
               </div>
             </div>
           </div>
@@ -1357,272 +421,509 @@
       <p class="heading-para">Testimonials</p>
     </div>
   </div>
-  <div class="container" style="margin: 50px auto; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
-    <div class="justify-content-center align-items-center">
+  <div
+    style="background:url(./img/wave.svg);background-repeat: no-repeat; background-size: cover; background-position-y: center;">
+    <div class="container" style="margin: 50px auto; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+      <div class="justify-content-center align-items-center">
 
-      <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel" style="margin: 0px;">
-        <div class="carousel-inner" id="carousel-inner-id">
-          <div class="carousel-item active">
-            <div class="cards-wrapper" id="cards-wrapper-id">
-              <div class="card" id="card-id" style="border-color: white; max-width:600px ;">
-                <div class="testimonial-writer-details">
-                  <div class="testimonial-writer-avatar">
-                    <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png">
+        <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel" style="margin: 0px;">
+          <div class="carousel-inner" id="carousel-inner-id">
+            <div class="carousel-item active">
+              <div class="cards-wrapper" id="cards-wrapper-id">
+                <div class="card" id="card-id"
+                  style="background-color:transparent;border-color: transparent; max-width:600px ;">
+                  <div class="testimonial-writer-details">
+                    <div class="testimonial-writer-avatar">
+                      <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png">
+                    </div>
+                    <div class="testimonial-writer-name">
+                      Karan Singh
+                    </div>
                   </div>
-                  <div class="testimonial-writer-name">
-                    Karan Singh
+                  <div class="testimonial-body text-left">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi velit natus perferendis voluptatibus
+                    accusamus voluptas et, quae error dignissimos saepe laudantium alias facilis, repudiandae architecto
+                    eius officiis, consequatur harum amet.
                   </div>
                 </div>
-                <div class="testimonial-body text-left">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi velit natus perferendis voluptatibus
-                  accusamus voluptas et, quae error dignissimos saepe laudantium alias facilis, repudiandae architecto
-                  eius officiis, consequatur harum amet.
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper" id="cards-wrapper-id">
+                <div class="card" id="card-id"
+                  style="background-color:transparent; border-color: transparent; max-width:600px ;">
+                  <div class="testimonial-writer-details">
+                    <div class="testimonial-writer-avatar">
+                      <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png">
+                    </div>
+                    <div class="testimonial-writer-name">
+                      Karan Singh
+                    </div>
+                  </div>
+                  <div class="testimonial-body text-left">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi velit natus perferendis voluptatibus
+                    accusamus voluptas et, quae error dignissimos saepe laudantium alias facilis, repudiandae architecto
+                    eius officiis, consequatur harum amet.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper" id="cards-wrapper-id">
+                <div class="card" id="card-id"
+                  style="background-color:transparent;border-color: transparent; max-width:600px ;">
+                  <div class="testimonial-writer-details">
+                    <div class="testimonial-writer-avatar">
+                      <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png">
+                    </div>
+                    <div class="testimonial-writer-name">
+                      Karan Singh
+                    </div>
+                  </div>
+                  <div class="testimonial-body text-left">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi velit natus perferendis voluptatibus
+                    accusamus voluptas et, quae error dignissimos saepe laudantium alias facilis, repudiandae architecto
+                    eius officiis, consequatur harum amet.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="cards-wrapper" id="cards-wrapper-id">
-              <div class="card" id="card-id" style="border-color: white; max-width:600px ;">
-                <div class="testimonial-writer-details">
-                  <div class="testimonial-writer-avatar">
-                    <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png">
-                  </div>
-                  <div class="testimonial-writer-name">
-                    Karan Singh
-                  </div>
-                </div>
-                <div class="testimonial-body text-left">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi velit natus perferendis voluptatibus
-                  accusamus voluptas et, quae error dignissimos saepe laudantium alias facilis, repudiandae architecto
-                  eius officiis, consequatur harum amet.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="cards-wrapper" id="cards-wrapper-id">
-              <div class="card" id="card-id" style="border-color: white; max-width:600px ;">
-                <div class="testimonial-writer-details">
-                  <div class="testimonial-writer-avatar">
-                    <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png">
-                  </div>
-                  <div class="testimonial-writer-name">
-                    Karan Singh
-                  </div>
-                </div>
-                <div class="testimonial-body text-left">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi velit natus perferendis voluptatibus
-                  accusamus voluptas et, quae error dignissimos saepe laudantium alias facilis, repudiandae architecto
-                  eius officiis, consequatur harum amet.
-                </div>
-              </div>
-            </div>
+          <a id="carousel-control-prev-id" class="carousel-control-prev" href="#carouselExampleControls1" role="button"
+            data-slide="prev">
+            <span class="carousel-control-prev-icon" style="background-color :black; border-radius: 2px;"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a id="carousel-control-next-id" class="carousel-control-next" href="#carouselExampleControls1" role="button"
+            data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"
+              style="background-color :black; border-radius: 1px;"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    <!-- G2C -->
+
+
+    <div class="container-fluid" style="position: relative; margin: 0; padding:0px 0px;">
+      <div class="container about-container" style="text-align: center; margin-bottom: 15px;">
+        <p class="heading-para">Government To Customer</p>
+      </div>
+      <div class="container-fluid" id="fade_div1" style="padding:5px 10px !important;">
+        <div style="margin: 0 auto; width: fit-content;">
+          <h4 id="fade_head1" style="font-family: 'Roboto Slab', serif;"> National Level Services</h4>
+        </div>
+        <br>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col" style="margin:3px 0px; padding: 0;"><img src="./img/g2c1.jpg" alt=""
+                style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
+            <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c2.jpg" alt=""
+                style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
+            <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c3.jpg" alt=""
+                style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
+            <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c4.jpg" alt=""
+                style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
+            <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c5.jpg" alt=""
+                style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
+            <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c6.jpg" alt=""
+                style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
+            <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c7.jpg" alt=""
+                style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
+            <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c8.jpg" alt=""
+                style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
+            <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c9.jpg" alt=""
+                style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
           </div>
         </div>
-        <a id="carousel-control-prev-id" class="carousel-control-prev" href="#carouselExampleControls1" role="button"
-          data-slide="prev">
-          <span class="carousel-control-prev-icon" style="background-color :black; border-radius: 2px;"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a id="carousel-control-next-id" class="carousel-control-next" href="#carouselExampleControls1" role="button"
-          data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"
-            style="background-color :black; border-radius: 1px;"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
 
-    </div>
-  </div>
-
-
-
-
-  <!-- G2C -->
-
-  
-  <div class="container-fluid" style="position: relative; margin: 0; padding:0px 0px;">
-    <div class="container about-container" style="text-align: center; margin-bottom: 15px;">
-        <p class="heading-para">Government To Customer</p>
-    </div>
-  <div class="container-fluid" id="fade_div1" style="padding:0px 10px !important;">
-    <div style="margin: 0 auto; width: fit-content;">
-      <h4 id="fade_head1"> National Level Services</h4>
-    </div>
-    <br>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col" style="margin:3px 0px; padding: 0;"><img src="./img/g2c1.jpg" alt=""
-            style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c2.jpg" alt=""
-            style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c3.jpg" alt=""
-            style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c4.jpg" alt=""
-            style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c5.jpg" alt=""
-            style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c6.jpg" alt=""
-            style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c7.jpg" alt=""
-            style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c8.jpg" alt=""
-            style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/g2c9.jpg" alt=""
-            style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
+      <div class="container-fluid" id="fade_div2" style="padding:5px 10px !important;">
+        <div style="margin: auto; width: fit-content;">
+          <h4 id="fade_head2" style="font-family: 'Roboto Slab', serif;"> State Level Services</h4>
+        </div>
+        <br>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-1.png" alt=""
+                style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
+            <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-2.png" alt=""
+                style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
+            <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-3.png" alt=""
+                style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
+            <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-4.png" alt=""
+                style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
+            <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-5.png" alt=""
+                style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
+            <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-1.png" alt=""
+                style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
+            <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-6.png" alt=""
+                style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
+            <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-7.png" alt=""
+                style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
+            <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-8.png" alt=""
+                style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
-  <div class="container-fluid" id="fade_div2" style="padding:5px 10px !important;">
-    <div style="margin: auto; width: fit-content;">
-      <h4 id="fade_head2"> State Level Services</h4>
-    </div>
-    <br>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-1.png" alt=""
-            style="width: 110px; margin-top: 15px; margin-left:15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-2.png" alt=""
-            style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-3.png" alt=""
-            style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-4.png" alt=""
-            style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-5.png" alt=""
-            style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-1.png" alt=""
-            style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-6.png" alt=""
-            style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-7.png" alt=""
-            style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
-        <div class="col" style="margin:3px 0; padding: 0;"><img src="./img/state-8.png" alt=""
-            style="width: 110px; margin-top: 15px;margin-left:15px;"></div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <br>
   <br>
 
   <!-- Services-tables  -->
   <div class="container about-container" style="margin-top:0;">
-    <div>
+    <div style="margin-top: 0;">
       <p class="heading-para">Our Services</p>
     </div>
   </div>
 
 
-  <div class="price_table" style="padding:0 30px;">
-    <div class="package package_free">
-      <h2>GST Services</h2>
-      <!-- <div class="price">£<div class="big">0</div>/mo</div> -->
-      <!-- <p>Sign up today for a free account and receive: </p> -->
-      <ul>
-        <li>GST Registration</li>
-        <li>GST Filing Regular Scheme</li>
-        <li>GST Return Filing Composition Scheme</li>
-        <li>GST Annual Return</li>
-        <li>GST Audit</li>
-        <li>GST ITC Refund</li>
-        <li>GST Composition to Regular Scheme</li>
-        <li>GST E-Commerce Return</li>
-        <li>GST Final Return</li>
-        <li>GST Reconciliation</li>
-        <li>GST Surrender</li>
-        <li>GSTR 7 Return</li>
-        <li>Revocation of GST</li>
-        <li>GST PMT 09 Form Submission</li>
-        <li>GST Regular Return Annual Charges</li>
-        <li>GST Response of Notice</li>
-        <li>GST Return Filing in Composition Scheme ( CMP-8)</li>
-        <li>GST Amendment</li>
-        <li>TCS & TDS GST Return Filing</li>
-        <li>E-Way Bill +100 More</li>
-      </ul>
+  <div class="container-fluid" style="padding:5px 30px;background-color: #eeeeee; color: black;     font-family: 'Roboto Slab', serif;">
+    <div class="row">
+      <div class="col" style="padding: 0px 30px;">
+        <div
+          style="background:rgba(255, 141, 60, 0.952); padding:5px 0px;text-align:center;margin-bottom:10px;border-radius:25px;">
+          <h4>GST Services</h4>
+        </div>
+        <!-- <div class="price">£<div class="big">0</div>/mo</div> -->
+        <!-- <p>Sign up today for a free account and receive: </p> -->
+        <ul style="font-size: medium;padding:5px 15px">
+          <li>GST Registration, GST Filing Regular Scheme</li>
+          <li>GST Return Filing Composition Scheme</li>
+          <li>GST Annual Return</li>
+          <li>GST ITC Refund, GST Audit</li>
+          <li>GST Composition to Regular Scheme</li>
+          <li>GST E-Commerce Return, GST Final Return</li>
+          <li>GST Reconciliation, GST Amendment</li>
+          <li>GSTR 7 Return</li>
+          <li>Revocation of GST, GST Surrender</li>
+          <li>GST PMT 09 Form Submission</li>
+          <li>GST Regular Return Annual Charges</li>
+          <li>GST Response of Notice</li>
+          <li>GST Return Filing in Composition Scheme (CMP-8)</li>
+          <li>TCS & TDS GST Return Filing</li>
+          <li>E-Way Bill +100 More</li>
+        </ul>
+      </div>
+
       <!-- <button>Learn more</button> -->
+      <div class="col" style="padding: 0px 30px;">
+        <!-- <div class="banner">Most Popular</div> -->
+        <div
+          style="background:rgba(255, 141, 60, 0.952); padding:5px 0px;text-align:center;margin-bottom:10px;border-radius:25px;">
+          <h4>CA & Accounting Services</h4>
+        </div>
+        <!-- <div class="price">£<div class="big">5</div>/mo</div> -->
+        <!-- <p>Includes everything in our Free package plus:</p> -->
+        <ul style="font-size: medium;padding:5px 15px">
+          <li>Balance Sheet & Profit Loss Account</li>
+          <li>CA Certification of Balance Sheet</li>
+          <li>Monthly/Yearly - Accounting Package</li>
+          <li>Income Tax Return, TAX Audit</li>
+          <li>Appoinment of an Auditor</li>
+          <li>Trademark Registration</li>
+          <li>Import Export Code (IEC)</li>
+          <li>Food License & Registration (FSSAI)</li>
+          <li>TDS Return, TDS Challan Submission</li>
+          <li>Advance TAX</li>
+          <li>Letter of Undertaking (LUT)</li>
+          <li>PF & ESI Registration</li>
+          <li>PF KYC, Widhdrawal & Return</li>
+          <li>CMA & Project Report</li>
+          <li>Statutory Audit</li>
+          <li>Digital Signature Certificate (DSC)</li>
+          <li>Trade Licence</li>
+          <!-- <li>Premium Support</li> -->
+        </ul>
+        <!-- <button>Learn more</button> -->
+      </div>
+
+      <div class="col" style="padding: 0px 30px;">
+        <!-- <div class="banner">Most Popular</div> -->
+        <div
+          style="background:rgba(255, 141, 60, 0.952); padding:5px 0px;text-align:center;margin-bottom:10px;border-radius:25px;">
+          <h4>Company Registration Services</h4>
+        </div>
+        <!-- <div class="price">£<div class="big">5</div>/mo</div> -->
+        <!-- <p>Includes everything in our Free package plus:</p> -->
+        <ul style="font-size: medium;padding:5px 15px">
+          <li>Company Formation, ROC Filling</li>
+          <li>MGT-7A, AOC-4</li>
+          <li>Directors Identification Number (DIN)</li>
+          <li>PAN & TAN, RUN Firm</li>
+          <li>Registration Under Shop Establishment </li>
+          <li>Trust & Society Registration </li>
+          <li>One Person Company Registration (OPC)</li>
+          <li>NIDHI Company Registration</li>
+          <li>Sec 8 Company Registration</li>
+          <li>LLP Formation</li>
+          <li>Partnership Firm</li>
+          <li>Gem Registration</li>
+          <li>Udyam Registration</li>
+          <li>Company KYC</li>
+          <li>Director's KYC</li>
+          <li>Alteration and Edition in Company </li>
+          <li>Closing of Company</li>
+        </ul>
+        <!-- <button>Learn more</button> -->
+      </div>
     </div>
-    <div class="package package_bronze">
-      <!-- <div class="banner">Most Popular</div> -->
-      <h2>Digital Marketing Services</h2>
-      <!-- <div class="price">£<div class="big">5</div>/mo</div> -->
-      <!-- <p>Includes everything in our Free package plus:</p> -->
-      <ul>
-        <li>Search Engine Optimization</li>
-        <li>Online Reputation Management</li>
-        <li>Logo Designing</li>
-        <li>Pamphlet Designing</li>
-        <li>Banner and Poster Designing</li>
-        <li>Website Designing</li>
-        <li>Website Development</li>
-        <li>Google Advertisement</li>
-        <li>Copywriting and Content Marketing</li>
-        <li>Video Marketing Services</li>
-        <li>Mobile App Marketing</li>
-        <li>Social Media Marketing</li>
-        <!-- <li>Premium Support</li> -->
-      </ul>
+    <div class="row">
+      <div class="col" style="padding: 0px 30px;">
+        <div
+          style="background:rgba(255, 141, 60, 0.952); padding:5px 0px;text-align:center;margin-bottom:10px;border-radius:25px;">
+          <h4 style="color:rgb(0, 0, 0)">Insurance</h4>
+        </div>
+        <!-- <div class="price">£<div class="big">0</div>/mo</div> -->
+        <!-- <p>Sign up today for a free account and receive: </p> -->
+        <ul style="font-size: medium;padding:5px 15px">
+          <li>Car Insurance </li>
+          <li>Bike Insurance </li>
+          <li>Good Carrying Vehicle (GCV)</li>
+          <li>Health Insurance</li>
+          <li>Life Insurance </li>
+          <li>Travel Insurance</li>
+          <li>Corporate Insurance </li>
+          <li>Fleet Insurance</li>
+          <li>Government Insurance</li> 
+          <li>Personal Accidental Insurance</li>
+          <li>Home & Shop Insurance </li>
+          <li>Investment Plan Insurance</li>
+        </ul>
+      </div>
+
       <!-- <button>Learn more</button> -->
+      <div class="col" style="padding: 0px 30px;">
+        <!-- <div class="banner">Most Popular</div> -->
+        <div
+          style="background:rgba(255, 141, 60, 0.952); padding:5px 0px;text-align:center;margin-bottom:10px;border-radius:25px;">
+          <h4 style="color:rgb(0, 0, 0)">Digital Marketing Services</h4>
+        </div>
+        <!-- <div class="price">£<div class="big">5</div>/mo</div> -->
+        <!-- <p>Includes everything in our Free package plus:</p> -->
+        <ul style="font-size: medium;padding:5px 15px">
+          <li>Search Engine Optimization</li>
+          <li>Online Reputation Management</li>
+          <li>Logo/Pamphlet Designing</li>
+          <li>Banner and Poster Designing</li>
+          <li>Website Designing</li>
+          <li>Website Development</li>
+          <li>Google Advertisement</li>
+          <li>Copywriting and Content Marketing</li>
+          <li>Video Marketing Services</li>
+          <li>Mobile App Marketing</li>
+          <li>Social Media Marketing</li>
+          <!-- <li>Premium Support</li> -->
+        </ul>
+        <!-- <button>Learn more</button> -->
+      </div>
+      
+     
+      <div class="col" style="padding: 0px 30px;">
+        <!-- <div class="banner">Most Popular</div> -->
+        <div
+          style="background:rgba(255, 141, 60, 0.952); padding:5px 0px;text-align:center;margin-bottom:10px;border-radius:25px;">
+          <h4 style="color:rgb(0, 0, 0)">Utility Service</h4>
+        </div>
+        <ul style="font-size: medium;padding:5px 15px">
+          <li>Mobile Bill</li>
+          <li>Electricity</li>
+          <li>Data Card Recharge</li>
+          <li>DTH Recharge</li>
+          <li>Insurance Premium</li>
+          <li>Gas Booking</li>
+          <li>Water Bill payment</li>
+          <li>Money Transfer</li>
+          <li>Aadhar Enable Payment System</li>
+          <li>Aadhar Payment </li>
+          <li>Micro ATM</li>
+        </ul>
+        <!-- <button>Learn more</button> -->
+      </div>
+
+      <!--  -->
     </div>
-    <div class="package package_silver">
-      <h2>CA & Accounting Services</h2>
-      <!-- <div class="price">£<div class="big">10</div>/mo</div> -->
-      <!-- <p>Includes everything in our Bronze package plus:</p> -->
-      <ul>
-        <li>Balance Sheet & Profit Loss Account</li>
-        <li>CA Certification of Balance Sheet</li> 
-        <li>Monthly - Accounting Package</li> 
-        <li>Yearly - Accounting Package</li> 
-        <li>Income Tax Return</li>
-        <li>Appoinment of an Auditor </li>
-        <li>TAX Audit</li>
-        <li>Trademark Registration </li>
-        <li>Import Export Code (IEC)</li>
-        <li>Food License & Registration (FSSAI)</li>
-        <li>TDS Return</li>
-        <li>TDS Challan Submission </li>
-        <li>Advance TAX</li>
-        <li>Letter of Undertaking (LUT)</li>
-        <li>PF & ESI Registration</li>
-        <li>PF KYC, Widhdrawal & Return</li>
-        <li>CMA & Project Report</li>
-        <li>Statutory Audit</li>
-        <li>Digital Signature Certificate (DSC)</li>
-        <li>Trade Licence</li>
-      </ul>
+    <div class="row">
+      <div class="col" style="padding: 0px 30px;">
+        <div
+          style="background:rgba(255, 141, 60, 0.952); padding:5px 0px;text-align:center;margin-bottom:10px;border-radius:25px;">
+          <h4 style="color:rgb(0, 0, 0)">National Level Services</h4>
+        </div>
+        <!-- <div class="price">£<div class="big">0</div>/mo</div> -->
+        <!-- <p>Sign up today for a free account and receive: </p> -->
+        <ul style="font-size: medium;padding:5px 15px">
+          <li>Voter ID Card</li>
+          <li>Passport</li>
+          <li>Driving License</li>
+          <li>Janaushadhi Kendra</li>
+          <li>Aayushman Mitra</li>
+          <li>Women Entrepreneurship Platform (WEP)</li>
+          <li>Health  Card</li>
+          <li>E-Shramik Card</li>
+          <li>Download Aayushman Card</li> 
+          <li>Aayushman Labharti Card</li>
+        </ul>
+      </div>
+      
+
       <!-- <button>Learn more</button> -->
-    </div>
-    <div class="package package_gold">
-      <h2>Company Registration Services</h2>
-      <!-- <div class="price">£<div class="big">19</div>/mo</div> -->
-      <!-- <p>Includes everything in our Silver package plus:</p> -->
-      <ul>
-        <li>Company Formation</li>
-        <li>ROC Filling</li>
-        <li>MGT-7A</li>
-        <li>AOC-4</li>
-        <li>RUN Firm</li>
-        <li>Directors Identification Number (DIN)</li>
-        <li>PAN & TAN</li>
-        <li>Registration Under Shop Establishment </li>
-        <li>Trust & Society Registration </li>
-        <li>One Person Company Registration (OPC)</li>
-        <li>NIDHI Company Registration</li>
-        <li>Sec 8 Company Registration</li>
-        <li>LLP Formation</li>
-        <li>Partnership Firm</li>
-        <li>Gem Registration</li>
-        <li>Udyam Registration</li>
-        <li>Company KYC</li>
-        <li>Director's KYC</li>
-        <li>Alteration and Edition in Company </li>
-        <li>Closing of Company</li>
-      </ul>
-      <!-- <button>Learn more</button> -->
+      <div class="col" style="padding: 0px 30px;">
+        <!-- <div class="banner">Most Popular</div> -->
+        <div
+          style="background:rgba(255, 141, 60, 0.952); padding:5px 0px;text-align:center;margin-bottom:10px;border-radius:25px;">
+          <h4 style="color:rgb(0, 0, 0)">State Level Services</h4>
+        </div>
+        <!-- <div class="price">£<div class="big">5</div>/mo</div> -->
+        <!-- <p>Includes everything in our Free package plus:</p> -->
+        <ul style="font-size: medium;padding:5px 15px">
+          <li>Birth Certificate</li>
+          <li>Death Certificate</li>
+          <li>Caste Certificate</li>
+          <li>Income Certificate</li>
+          <li>Domicile Certificate</li>     
+          <li>Labor Registration</li>
+          <li>Marriage Certificate</li>
+          <li>Pension Scheme</li>
+          <li>Disability Certificate</li>
+        </ul>
+        <!-- <button>Learn more</button> -->
+      </div>
+
+      <div class="col" style="padding: 0px 30px;">
+        <div
+          style="background:rgba(255, 141, 60, 0.952); padding:5px 0px;text-align:center;margin-bottom:10px;border-radius:25px;">
+          <h4 style="color:rgb(0, 0, 0)">Loans & Credit Cards</h4>
+        </div>
+        <!-- <div class="price">£<div class="big">0</div>/mo</div> -->
+        <!-- <p>Sign up today for a free account and receive: </p> -->
+        <ul style="font-size: medium;padding:5px 15px">
+          <li>Flexi Personal Loan (within 30 Minutes)</li>
+          <li>Personal Loan</li>
+          <li>Business Loan</li>
+          <li>Home Loan</li>
+          <li>Loan Against Property</li> 
+          <li>Car Loan</li>
+          <li>Old Car Loan (Pan India)</li>
+          <li>Commercial Car Loan (Delhi NCR)</li>
+          <li>Credit Cards </li>
+        </ul>
+      </div>
     </div>
   </div>
+  </div>
+
+
+
+  <div class="container-fluid">
+    <img src="./img/Frame 1.png" style="width: 100%; border-color: transparent;">
+  </div>
+
+
+
+  <div class="container about-container">
+    <div>
+      <p class="heading-para">Our Partners</p>
+    </div>
+  </div>
+  <div data-aos="zoom-in" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <!-- <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" style="z-index: 5;"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1" style="z-index: 5;"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2" style="z-index: 5;"></li>
+    </ol> -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="container">
+          <div class="row" style="margin:8px 17px">
+            <div class="col services-col">
+              <div class="card"
+                style="width: 13rem;margin:5px auto;border-color:white;background-color:white;">
+                <img style="max-width: 100%; width: 90%;" src="./img/partner1.jpg" class="card-img" alt="...">
+              </div>
+            </div>
+            <div class="col services-col">
+              <div class="card"
+                style="width: 13rem;margin:5px auto;border-color:white;background-color:white;">
+                <img style="max-width: 100%; width: 90%;" src="./img/partner2.jpg" class="card-img" alt="...">
+              </div>
+            </div>
+            <div class="col services-col">
+              <div class="card"
+                style="width: 13rem;margin:5px auto;border-color:white;background-color:white;">
+                <img style="max-width: 100%; width: 90%;" src="./img/partner3.jpg" class="card-img" alt="...">
+              </div>
+            </div>
+            <div class="col services-col">
+              <div class="card"
+                style="width: 13rem;border-color:white;background-color:white;margin:5px auto;">
+                <img style="max-width: 100%; width: 90%;" src="./img/partner-4.png" class="card-img" alt="...">
+              </div>
+            </div>
+            <div class="col services-col">
+              <div class="card"
+                style="width: 13rem;margin:5px auto;border-color:white;background-color:white;">
+                <img style="max-width: 100%; width: 90%;" src="./img/partner-7.png" class="card-img" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="container">
+          <div class="row" style="margin:8px 17px">
+            <div class="col services-col">
+              <div class="card"
+                style="width: 13rem;margin:5px auto;border-color:white;background-color:white;">
+                <img style="max-width: 100%; width: 90%;" src="./img/partner-5.png" class="card-img" alt="...">
+              </div>
+            </div>
+            <div class="col services-col">
+              <div class="card"
+                style="width: 13rem;margin:5px auto;border-color:white;background-color:white;">
+                <img style="max-width: 100%; width: 90%;" src="./img/partner-6.jpeg" class="card-img" alt="...">
+              </div>
+            </div>
+            <div class="col services-col">
+              <div class="card"
+                style="width: 13rem;margin:5px auto;border-color:white;background-color:white;">
+                <img style="max-width: 100%; width: 90%;" src="./img/partner-7.png" class="card-img" alt="...">
+              </div>
+            </div>
+            <div class="col services-col">
+              <div class="card"
+                style="width: 13rem;border-color:white;background-color:white;margin:5px auto;">
+                <img style="max-width: 100%; width: 90%;" src="./img/partner-9.png" class="card-img" alt="...">
+              </div>
+            </div>
+            <div class="col services-col">
+              <div class="card"
+                style="width: 13rem;border-color:white;background-color:white;margin:5px auto;">
+                <img style="max-width: 100%; width: 90%;" src="./img/partner-4.png" class="card-img" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a> -->
+  </div>
+
+
+
+
 
 
   <!-- Footer -->
@@ -1743,73 +1044,7 @@
   </footer>
 
 
-  <script>
-
-
-    $(window).on('scroll', function () {
-      if ($(window).scrollTop() >= $(
-        '.services-counter').offset().top + $('.services-counter').
-          outerHeight() - window.innerHeight) {
-
-        const counters = document.querySelectorAll('.counter');
-        const speed = 300; // The lower the slower
-        counters.forEach(counter => {
-          const updateCount = () => {
-            const target = +counter.getAttribute('data-target');
-            const count = +counter.innerText;
-
-            // Lower inc to slow and higher to slow
-            const inc = parseInt(target / speed);
-
-            // console.log(inc);
-            // console.log(count);
-
-            // Check if target is reached
-            if (count < target) {
-              // Add inc to count and output in counter
-              counter.innerText = count + inc;
-              // Call function every ms
-              setTimeout(updateCount, 10);
-            } else {
-              counter.innerText = target;
-            }
-          };
-
-          updateCount();
-        });
-
-      }
-    });
-
-
-
-    var fade_div1 = document.querySelector("#fade_div1");
-    var fade_div2 = document.querySelector("#fade_div2");
-    var heading1 = document.querySelector("#fade_head1");
-    var heading2 = document.querySelector("#fade_head2");
-
-    fade_div1.classList.add("first");
-    
-    fade_div2.classList.add("second");
-    // heading1.classList.add("word-first");
-    // heading2.classList.add("word-second");
-    setInterval(()=>{
-      fade_div1.classList.toggle("first");
-      fade_div2.classList.toggle("first");
-      fade_div1.classList.toggle("second");
-      fade_div2.classList.toggle("second");
-    },10000)
-    
-    // setInterval(()=>{
-    //   heading1.classList.toggle("word-first");
-    //   heading2.classList.toggle("word-second");
-    //   heading1.classList.toggle("word-second");
-    //   heading2.classList.toggle("word-first");
-    // },20000)
-  </script>
-
-
-
+  <script src="main.js"></script>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
